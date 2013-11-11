@@ -3,6 +3,11 @@
 
 UPDATE
 - Servers installer supports now ARM arch raspbrry PI
+if u use a PI first do this command.
+
+
+ 	sudo apt-get install liblua5.1-0-dev screen realpath
+
 
 It's always the same in Linux: To make it work on your system, some quake2 
 stuff needs to be compiled. Please follow these simple instructions.
