@@ -1,0 +1,8 @@
+==================================
+- ;-) change motd.txt 
+
+its in q2srv/action folder
+
+also read README again. . .
+==================================
+

@@ -1,0 +1,159 @@
+===============================================================================
+Action Quake2 - Base Server Installer by Paul Klumpp (2012-11-18)
+													Edit	 Stan0x	(2013-05-01)
+Servers installer supports now ARM arch raspbrry PI
+
+It's always the same in Linux: To make it work on your system, some quake2 
+stuff needs to be compiled. Please follow these simple instructions.
+
+First, on Linux, be an unprivileged user. The following will create a
+"aq2-server" directory, so, there is no need to create a new directory.
+Just start the the magic script by:
+
+
+Q: But, what do they really do?
+A: In fact, those two magic scripts are just a shortcut for the following steps:
+
+  git clone https://github.com/stan0x/aq2-server.git  
+  or 
+  git pull # if the files already exist
+
+  cd aq2-server/q2compile
+  
+  
+  ./make_and_put_all.sh clean
+  or 
+  ./make_and_put_all.sh update
+
+
+===============================================================================
+Now, to YOUR JOB! Your job is to configure your server, so read the
+following steps carefully and learn something.
+===============================================================================
+
+ABOUT THE ACTION QUAKE 2 MOD CONFIGURATION:
+-------------------------------------------
+
+Change to your q2 server action directory:
+
+  cd aq2-server/q2srv/action/
+
+
+There, you have to edit your configuration files, and set your stuff up.
+
+See which cfg files are there:
+
+  ls -1 *cfg   
+
+
+Edit h_passwords.cfg so you have a rcon_password that you actually know:
+
+  nano h_passwords.cfg
+
+
+Edit aq2_1.cfg, aq2_2.cfg etc so you have a nice hostname etc.
+
+  nano aq2_1.cfg
+  etc.
+
+
+For information about AQ2-TNG Mod settings inside those configuration files, 
+see the documentation inside the docs/ directory!!
+
+Inside the h_admin/ directory are admin helper scripts. With those little 
+scripts you can get additional maps or update your soundlist.ini.
+
+This will install cloud.bsp and update your maplist (config/maplist.ini):
+  
+  ./getmap.sh cloud
+
+
+For a public server which is more fun ;), put your user wave files into 
+action/sound/user/. And then, to update your soundlist (config/soundlist.ini)
+goto action/h_admin/ and do:
+
+  ./make_sndlist.sh
+
+
+
+ABOUT GS STARTER:
+-----------------
+
+Change to your q2 server directory:
+
+  cd aq2-server/q2srv/
+
+
+Edit the gs_starter.cfg and try to study what it says:
+
+  nano gs_starter.cfg 
+
+  Note: The ACTIVATE variable defines which instances get run 
+        by ./gs_starter.sh startwatch. And obviously, the rest of the 
+        variables define starting parameters for these instances.
+
+
+Start the gs_starter.sh script... With default gs_starter.cfg, it will watch 
+over your Action Quake 2 game server instances 1, 2 and 3:
+
+  screen ./gs_starter.sh startwatch
+
+
+IT'S DONE. YOU'RE READY TO GO!
+But if you're new to Linux and "screen", you have to read "ABOUT SCREEN".
+
+
+You can kill ALL instances with:
+
+  ./gs_starter.sh stopall
+  Note: If they were watched by startwatch, the instances will come up again.
+
+
+You can kill an instance X with:
+
+  ./gs_starter.sh stop X
+  Note: If it was watched by startwatch, the instance will come up again.
+
+
+You can start an instance X with:
+
+  ./gs_starter.sh start X
+  Note: This does not necessarily mean that this instance is watched.
+
+
+You can stop watching the instances with:
+
+  ./gs_starter.sh stopwatch
+
+
+For help, just start it:
+
+  ./gs_starter.sh
+
+
+ABOUT SCREEN:
+-------------
+
+You can get a list of running gameserver instances with:
+
+  screen -ls
+
+
+You can attach to a running gameserver instance with:
+
+  screen -x gs1
+  or
+  screen -x gs2   etc.
+
+
+You can detach from a gameserver instance with:
+
+  Press  ctrl+a  then  press d
+
+
+
+And now, have fun!
+===============================================================================
+
+vim: expandtab tabstop=2 autoindent:
+kate: space-indent on; indent-width 2; mixedindent off;

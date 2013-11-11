@@ -1,0 +1,24 @@
+//  sndlist.ini
+// ============
+// This file should contain all user sounds for enabling Quake 2
+// download option. Just add the filenames with extensions, without
+// user path. If you like to use subdirectiories within your user
+// path, you have to add the subdirectory.
+//
+// example:
+//
+// If you have a.wav in action/sound/user, just add a.wav.
+// If you have a.wav in action/sound/user/admin,
+// add admin/a.wav.
+//
+// Even if you're running a server on a Windoze platform, use
+// slash instead of backslash.
+//
+// Comments starting with '//' or with '#' at the begining of
+// the line.
+//
+// DO NOT HAVE SPACES OR OTHER CONTROL CODES AT THE BEGINING
+// OF THE LINE. DO NOT ADD A COMMENT AT THE END OF A SOUND FILE
+// LINE. PLEASE ADD NEWLINE AT THE END OF THIS FILE.
+
+//Add your sounds down here
