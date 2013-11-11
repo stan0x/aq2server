@@ -14,11 +14,11 @@ Just start the the magic script by:
 Q: But, what do they really do?
 A: In fact, those two magic scripts are just a shortcut for the following steps:
 
-  git clone https://github.com/stan0x/aq2-server.git  
+  git clone https://github.com/stan0x/aq2server.git  
   or 
   git pull # if the files already exist
 
-  cd aq2-server/q2compile
+  cd aq2server/q2compile
   
   
   ./make_and_put_all.sh clean
@@ -36,7 +36,7 @@ ABOUT THE ACTION QUAKE 2 MOD CONFIGURATION:
 
 Change to your q2 server action directory:
 
-  cd aq2-server/q2srv/action/
+  cd aq2server/q2srv/action/
 
 
 There, you have to edit your configuration files, and set your stuff up.
@@ -81,7 +81,7 @@ ABOUT GS STARTER:
 
 Change to your q2 server directory:
 
-  cd aq2-server/q2srv/
+  cd aq2server/q2srv/
 
 
 Edit the gs_starter.cfg and try to study what it says:
