@@ -1,7 +1,8 @@
-===============================================================================
-Action Quake2 - Base Server Installer by Paul Klumpp (2012-11-18)
-													Edit	 Stan0x	(2013-05-01)
-Servers installer supports now ARM arch raspbrry PI
+				Aq2server README
+
+
+UPDATE
+- Servers installer supports now ARM arch raspbrry PI
 
 It's always the same in Linux: To make it work on your system, some quake2 
 stuff needs to be compiled. Please follow these simple instructions.
