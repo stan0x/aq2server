@@ -1,6 +1,7 @@
 				Aq2server README
 
 
+
 It's always the same in Linux: To make it work on your system, some quake2 
 stuff needs to be compiled. Please follow these simple instructions.
 
@@ -8,6 +9,8 @@ First, on Linux, be an unprivileged user. The following will create a
 "aq2-server" directory, so, there is no need to create a new directory.
 Just start the the magic script by:
 
+Q: Witch packets do i need to install to make it work from a fresh raspbian/ubuntu install?
+A: sudo apt-get install libsdl1.2-dev libsdl1.2debian realpath lua5.1 screen liblua5.1-0-dev git gcc nano
 
 Q: But, what do they really do?
 A: In fact, those two magic scripts are just a shortcut for the following steps:
