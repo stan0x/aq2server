@@ -156,5 +156,10 @@ You can detach from a gameserver instance with:
 And now, have fun!
 ===============================================================================
 
+You may need to open some ports. where XXXXX:XXXXX need to fill in your ports to open. only need to open UDP socket.
+
+	iptables -A INPUT -p udp -m udp --dport XXXXX:XXXXX -j ACCEPT
+
+
 vim: expandtab tabstop=2 autoindent:
 kate: space-indent on; indent-width 2; mixedindent off;
