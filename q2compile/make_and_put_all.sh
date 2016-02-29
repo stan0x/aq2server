@@ -94,7 +94,7 @@ function main {
     makeit[1]="make"
 
     repo[2]="aq2-tng"
-    url[2]="https://github.com/hifi/aq2-tng.git"
+    url[2]="https://github.com/stan0x/aq2-tng.git"
     cleanit[2]="cd source && pwd && make clean"
     makeit[2]="cd source && pwd && make"
 
