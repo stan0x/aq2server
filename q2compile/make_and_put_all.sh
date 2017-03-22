@@ -89,7 +89,7 @@ function main {
     systemcheck
 
     repo[1]="q2admin"
-    url[1]="https://github.com/PaulKlumpp/q2admin.git"
+    url[1]="https://github.com/m4son/q2admin.git"
     cleanit[1]="make clean"
     makeit[1]="make"
 
@@ -111,7 +111,7 @@ function main {
     repo[5]="q2pro"
     url[5]="https://github.com/hifi/q2pro.git"
     cleanit[5]="make clean"
-    makeit[5]="cp -v ../q2proconfig ./.config && INCLUDES='-DUSE_PACKETDUP=1' make q2proded"
+    makeit[5]="cp -v ../q2proconfig ./.config && INCLUDES='-DUSE_FPS=1'  && INCLUDES='-DUSE_PACKETDUP=1' make q2proded"
 
     ARCH=$(uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc/ -e s/sparc64/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/alpha/axp/)
 
