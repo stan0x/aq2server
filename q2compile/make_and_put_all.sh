@@ -235,48 +235,48 @@ function main {
     echo "Please review the files h_passwords.cfg, aq2_*.cfg in 'q2srv/action'."
     echo "Other than that ;) read the README file"
     echo
-	
-	#Simple script to change cfg's when installed aq2server
-	#made by stan0x
+    
+    #Simple script to change cfg's when installed aq2server
+    #made by stan0x
 
-	#Fill in vars
-	echo "RUNNING THIS SCRIPT WILL RESET YOUR CURRENT SETTINGS. BE AWARE ! ! :D"
-	echo "RUN THIS ONLY THE FIRST TIME !!"
-	echo "RUNNING THIS SCRIPT WILL RESET YOUR CURRENT SETTINGS. BE AWARE ! ! :D"
-	echo "Type in the rcon_password u want to set."
-	read password
-	echo "Type your name"
-	read name
-	echo "Type your irc chanel eq: #channel"
-	read irc
-	echo "Type in quakenet server eq: irc.quakenet.com"
-	read ircserver
-	echo "Fill in the host name max 12 chars"
-	read hostname
+    #Fill in vars
+    echo "RUNNING THIS SCRIPT WILL RESET YOUR CURRENT SETTINGS. BE AWARE ! ! :D"
+    echo "RUN THIS ONLY THE FIRST TIME !!"
+    echo "RUNNING THIS SCRIPT WILL RESET YOUR CURRENT SETTINGS. BE AWARE ! ! :D"
+    echo "Type in the rcon_password u want to set."
+    read password
+    echo "Type your name"
+    read name
+    echo "Type your irc chanel eq: #channel"
+    read irc
+    echo "Type in quakenet server eq: irc.quakenet.com"
+    read ircserver
+    echo "Fill in the host name max 12 chars"
+    read hostname
 
-	#change h_password.cfg
-	sed -e "4s/.*/set rcon_password \"$password\"/" $q2srv/action/h_passwords.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/h_passwords.cfg
-	sed -e "27s/.*/sets _admin \"$name $irc $ircserver\"/" $q2srv/action/h_passwords.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/h_passwords.cfg
+    #change h_password.cfg
+    sed -e "4s/.*/set rcon_password \"$password\"/" $q2srv/action/h_passwords.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/h_passwords.cfg
+    sed -e "27s/.*/sets _admin \"$name $irc $ircserver\"/" $q2srv/action/h_passwords.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/h_passwords.cfg
 
-	#change hostname
-	sed -e "9s/.*/set hostname \"$hostname #1 - Teamplay\"/" $q2srv/action/aq2_1_tp.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_1_tp.cfg
-	sed -e "9s/.*/set hostname \"$hostname #2 - Deathmatch\"/" $q2srv/action/aq2_2_dm.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_2_dm.cfg
-	sed -e "9s/.*/set hostname \"$hostname #3 - Team Deathmatch\"/" $q2srv/action/aq2_3_tdm.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_3_tdm.cfg
-	sed -e "9s/.*/set hostname \"$hostname #4 - CTF\"/" $q2srv/action/aq2_4_ctf.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_4_ctf.cfg
-	sed -e "9s/.*/set hostname \"$hostname #5 - Domination\"/" $q2srv/action/aq2_5_dom.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_5_dom.cfg
-	sed -e "9s/.*/set hostname \"$hostname #6 - Clan war\"/" $q2srv/action/aq2_6_cw.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_6_cw.cfg
-	sed -e "9s/.*/set hostname \"$hostname #7 - Clan war\"/" $q2srv/action/aq2_7_cw.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_7_cw.cfg
+    #change hostname
+    sed -e "9s/.*/set hostname \"$hostname #1 - Teamplay\"/" $q2srv/action/aq2_1_tp.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_1_tp.cfg
+    sed -e "9s/.*/set hostname \"$hostname #2 - Deathmatch\"/" $q2srv/action/aq2_2_dm.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_2_dm.cfg
+    sed -e "9s/.*/set hostname \"$hostname #3 - Team Deathmatch\"/" $q2srv/action/aq2_3_tdm.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_3_tdm.cfg
+    sed -e "9s/.*/set hostname \"$hostname #4 - CTF\"/" $q2srv/action/aq2_4_ctf.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_4_ctf.cfg
+    sed -e "9s/.*/set hostname \"$hostname #5 - Domination\"/" $q2srv/action/aq2_5_dom.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_5_dom.cfg
+    sed -e "9s/.*/set hostname \"$hostname #6 - Clan war\"/" $q2srv/action/aq2_6_cw.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_6_cw.cfg
+    sed -e "9s/.*/set hostname \"$hostname #7 - Clan war\"/" $q2srv/action/aq2_7_cw.cfg > $q2srv/action/changed.cfg && mv $q2srv/action/changed.cfg $q2srv/action/aq2_7_cw.cfg
 
-	#get maps from the file repo
-	cd $q2srv/
-	wget -N -r -np -nH –cut-dirs=3 -R index.html http://149.210.173.39/action/maps/
+    #get maps from the file repo
+    cd $q2srv/
+    wget -N -r -np -nH –cut-dirs=3 -R index.html http://149.210.173.39/action/maps/
 
-	#update maplist so they all voteable
-	cd $q2srv/action/h_admin/
-	./make_maplist.sh
-	./make_sndlist.sh
-	./make_maplist_ctf.sh
-	./make_maplist_dom.sh
+    #update maplist so they all voteable
+    cd $q2srv/action/h_admin/
+    ./make_maplist.sh
+    ./make_sndlist.sh
+    ./make_maplist_ctf.sh
+    ./make_maplist_dom.sh
 
 	
 	
