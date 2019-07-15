@@ -39,3 +39,4 @@ cd action/h_admin/
 ./make_maplist.sh
 ./make_sndlist.sh
 ./make_maplist_ctf.sh
+./make_maplist_dom.sh
