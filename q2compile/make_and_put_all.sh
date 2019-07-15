@@ -158,6 +158,10 @@ function main {
                         cp -vr pics/ $q2srv/action/
                         cp -vr players/ $q2srv/action/
                         cp -vr sound/ $q2srv/action/
+						cd tng
+                        find . -name "*.flg" -type f -delete
+                        find . -name "*.aqg" -type f -delete
+                        cd ..
                         cp -vr tng/ $q2srv/action/
                     else
                         echo "Whaaat? 'aq2-tng' did not compile. Something was wrong."
