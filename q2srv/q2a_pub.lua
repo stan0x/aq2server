@@ -13,5 +13,6 @@ plugins = {
 	--exec_script_cvars_as_parameters = {"q2a_mvd_file", "game", "hostname"},
 	--needs_cvar_q2a_mvd_autorecord = false
     }
-
+    coinflip = {}, -- Heads & Tails script
+    version = {} -- version feedback script
 }
