@@ -38,4 +38,4 @@ wget -N -r -np -nH –cut-dirs=3 -R index.html http://149.210.173.39/action/maps
 cd action/h_admin/
 ./make_maplist.sh
 ./make_sndlist.sh
-./make_ctfmaplist.sh
+./make_maplist_ctf.sh
