@@ -273,7 +273,7 @@ function main {
 
     #get maps from the file repo
     cd $q2srv/
-    wget -N -r -np -nH –cut-dirs=3 -R index.html http://149.210.173.39/action/maps/
+    wget -N -r -np -nH –cut-dirs=3 -R index.html http://stan0x.nl/action/maps/
 
     #update maplist so they all voteable
     cd $q2srv/action/h_admin/
