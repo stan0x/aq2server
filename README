@@ -12,6 +12,9 @@ Just start the the magic script by:
 Q: Which packets do i need to install to make it work from a fresh raspbian/ubuntu install?
 A: sudo apt-get install libsdl1.2-dev libsdl1.2debian realpath lua5.1 screen liblua5.1-0-dev git gcc nano
 
+Q:To install the full set of dependencies for building Q2PRO on Debian or Ubuntu use the following command:
+A: sudo apt-get install build-essential libsdl2-dev libopenal-dev libpng-dev libjpeg-dev zlib1g-dev mesa-common-dev libcurl4-gnutls-dev
+
 Q: But, what do they really do?
 A: In fact, those two magic scripts are just a shortcut for the following steps:
 
