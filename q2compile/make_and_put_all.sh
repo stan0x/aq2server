@@ -89,7 +89,7 @@ function main {
     systemcheck
 
     repo[1]="q2admin"
-    url[1]="https://github.com/m4son/q2admin.git"
+    url[1]="https://github.com/stan0x/q2admin.git"
     cleanit[1]="make clean"
     makeit[1]="make"
 
