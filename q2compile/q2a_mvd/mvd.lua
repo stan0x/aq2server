@@ -338,7 +338,26 @@ function LogMessage(msg)
         
         return true
     end
-
+	-- nasty fix fot match mode fix its 15 second insteed of 20
+	local match = string.match(msg, "The round will begin in 15 seconds!")
+    if match ~= nil then
+        -- if mvd not recording then start mvd record
+        if mvd_records == false then
+            
+            if needs_cvar_q2a_mvd_autorecord == true then
+                local q2a_mvd_autorecord = gi.cvar("q2a_mvd_autorecord", "0").string
+                if q2a_mvd_autorecord ~= "" and q2a_mvd_autorecord ~= "0" then 
+                    mvd_start_recording()
+                end
+            else
+                mvd_start_recording()
+            end
+            
+        end
+        
+        return true
+    end
+	--end the nasty fix
     local match = string.match(msg, "Both Teams Must Be Ready!")
     if match ~= nil then
         -- if mvd is currently recording and t1, t2 == 0, then stop mvd recording and delete file
