@@ -24,10 +24,10 @@
 # gs_starter.cfg is part of gs_starter.sh
 #
 ##### now, hands away... #####
-if [ "${SHELL}" != "$(which bash)" ]; then
-	echo "Start this script with bash!"
-	exit
-fi
+# if [ "${SHELL}" != "$(which bash)" ]; then
+	# echo "Start this script with bash!"
+	# exit
+# fi
 function loadcfg() {
 	if [ -f "gs_starter.cfg" ]; then
 		. "./gs_starter.cfg"
