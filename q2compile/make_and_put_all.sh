@@ -109,7 +109,7 @@ function main {
     makeit[4]=""
 
     repo[5]="q2pro"
-    url[5]="https://github.com/hifi/q2pro.git"
+    url[5]="https://github.com/skullernet/q2pro.git"
     cleanit[5]="make clean"
     makeit[5]="cp -v ../q2proconfig ./.config && INCLUDES='-DUSE_FPS=1 -DUSE_PACKETDUP=1' make q2proded"
 
